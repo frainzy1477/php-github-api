@@ -11,10 +11,10 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-                php-versions: ['7.2', '7.3', '7.4', '8.0', '8.1']
+                php-versions: ['7.2', '7.3', '7.4', '8.0', '8.1', '8.2', '8.3', '8.4']
 
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v4
 
             - name: Setup PHP
               uses: shivammathur/setup-php@v2
@@ -23,17 +23,19 @@ jobs:
                   coverage: none
 
             - name: Install Composer Dependencies
-              uses: ramsey/composer-install@v1
+              uses: ramsey/composer-install@v3
 
             - name: Run phpunit
               run: vendor/bin/phpunit --verbose
+              env:
+                  SYMFONY_DEPRECATIONS_HELPER: 'max[self]=0'
 
     phpstan:
         name: PHPStan
         runs-on: ubuntu-latest
 
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v4
 
             - uses: shivammathur/setup-php@v2
               with:
@@ -41,7 +43,7 @@ jobs:
                   coverage: none
 
             - name: Install Composer Dependencies
-              uses: ramsey/composer-install@v1
+              uses: ramsey/composer-install@v3
 
             - name: Run phpstan
               run: vendor/bin/phpstan analyse --no-progress

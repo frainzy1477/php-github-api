@@ -5,6 +5,7 @@ namespace Github\Tests\Functional;
 use Github\AuthMethod;
 use Github\Client;
 use GuzzleHttp\Psr7\Response;
+use GuzzleHttp\Psr7\Utils;
 use Symfony\Component\Cache\Adapter\ArrayAdapter;
 
 /**
@@ -24,7 +25,7 @@ class CacheTest extends \PHPUnit\Framework\TestCase
         $mockClient->addResponse($this->getCurrentUserResponse('octocat'));
 
         $github = Client::createWithHttpClient($mockClient);
-        $github->addCache(new ArrayAdapter(), ['default_ttl'=>600]);
+        $github->addCache(new ArrayAdapter(), ['default_ttl' => 600]);
 
         $github->authenticate('fake_token_aaa', AuthMethod::ACCESS_TOKEN);
         $userA = $github->currentUser()->show();
@@ -44,7 +45,7 @@ class CacheTest extends \PHPUnit\Framework\TestCase
         $mockClient->addResponse($this->getCurrentUserResponse('octocat'));
 
         $github = Client::createWithHttpClient($mockClient);
-        $github->addCache(new ArrayAdapter(), ['default_ttl'=>600]);
+        $github->addCache(new ArrayAdapter(), ['default_ttl' => 600]);
 
         $github->authenticate('fake_token_aaa', AuthMethod::ACCESS_TOKEN);
         $userA = $github->currentUser()->show();
@@ -61,7 +62,7 @@ class CacheTest extends \PHPUnit\Framework\TestCase
             'Content-Type' => 'application/json',
         ];
 
-        $body = \GuzzleHttp\Psr7\stream_for(json_encode([
+        $body = Utils::streamFor(json_encode([
             'login' => $username,
         ]));
 

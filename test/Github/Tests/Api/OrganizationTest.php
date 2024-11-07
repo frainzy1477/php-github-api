@@ -89,6 +89,26 @@ class OrganizationTest extends TestCase
     }
 
     /**
+     * @test
+     */
+    public function shouldGetSelfHostedRunnersApiObject()
+    {
+        $api = $this->getApiMock();
+
+        $this->assertInstanceOf(\Github\Api\Organization\Actions\SelfHostedRunners::class, $api->runners());
+    }
+
+    /**
+     * @test
+     */
+    public function shouldGetVariablesApiObject()
+    {
+        $api = $this->getApiMock();
+
+        $this->assertInstanceOf(\Github\Api\Organization\Actions\Variables::class, $api->variables());
+    }
+
+    /**
      * @return string
      */
     protected function getApiClass()

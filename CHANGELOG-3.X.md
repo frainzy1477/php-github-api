@@ -1,5 +1,76 @@
 # Changelog
 
+## 3.16.0
+
+### Added
+- Add API to rerequest a check run ([Spea](https://github.com/Spea)) [#1141](https://github.com/KnpLabs/php-github-api/issues/1141)
+- List pull requests associated with a commit ([lmjhs](https://github.com/lmjhs)) [#1146](https://github.com/KnpLabs/php-github-api/issues/1146)
+
+## 3.15.0
+
+### Added
+- Fix implicit nullable types to avoid PHP 8.4 warnings ([eiriksm](https://github.com/eiriksm), [acrobat](https://github.com/acrobat)) [#1144](https://github.com/KnpLabs/php-github-api/issues/1144)
+- Add API endpoints to interact with organization roles ([glaubinix](https://github.com/glaubinix)) [#1143](https://github.com/KnpLabs/php-github-api/issues/1143)
+- Copilot Usage Endpoints ([anthony-webart](https://github.com/anthony-webart)) [#1142](https://github.com/KnpLabs/php-github-api/issues/1142)
+- Fix type error in ResultPager::fetch ([nunoplopes](https://github.com/nunoplopes)) [#1132](https://github.com/KnpLabs/php-github-api/issues/1132)
+
+## 3.14.1
+
+### Fixed
+- Handle case of GitHub returning 204 No Content in some scenarios ([tomcorbett](https://github.com/tomcorbett)) [#1135](https://github.com/KnpLabs/php-github-api/issues/1135)
+
+## 3.14.0
+
+### Added
+- Allow php-http/cache-plugin v2 ([GrahamCampbell](https://github.com/GrahamCampbell)) [#1134](https://github.com/KnpLabs/php-github-api/issues/1134)
+
+## 3.13.0
+
+### Added
+- Test against php 8.3 ([sergiy-petrov](https://github.com/sergiy-petrov)) [#1124](https://github.com/KnpLabs/php-github-api/issues/1124)
+- feat: Secret Scanning Alerts ([haridarshan](https://github.com/haridarshan)) [#1114](https://github.com/KnpLabs/php-github-api/issues/1114)
+- feat: User Migration ([haridarshan](https://github.com/haridarshan)) [#1115](https://github.com/KnpLabs/php-github-api/issues/1115)
+
+### Changed
+- General chores ([acrobat](https://github.com/acrobat)) [#1125](https://github.com/KnpLabs/php-github-api/issues/1125)
+
+### Fixed
+- Fix detection of secondary rate limit ([mathieudz](https://github.com/mathieudz)) [#1126](https://github.com/KnpLabs/php-github-api/issues/1126)
+
+## 3.12.0
+
+### Added
+- feat: Support for Organization Runners ([haridarshan](https://github.com/haridarshan), [renovate](https://github.com/renovate)[[bot](https://github.com/bot)]) [#1101](https://github.com/KnpLabs/php-github-api/issues/1101)
+- allow psr/http-message v2 ([LordSimal](https://github.com/LordSimal)) [#1122](https://github.com/KnpLabs/php-github-api/issues/1122)
+
+### Changed
+- Fixed branch alias ([GrahamCampbell](https://github.com/GrahamCampbell)) [#1109](https://github.com/KnpLabs/php-github-api/issues/1109)
+
+## 3.11.0
+
+### Added
+- Added environment variables & secrets ([Froxz](https://github.com/Froxz)) [#1104](https://github.com/KnpLabs/php-github-api/issues/1104)
+- Added Org & Repository variables ([Froxz](https://github.com/Froxz)) [#1106](https://github.com/KnpLabs/php-github-api/issues/1106)
+- Deployment branch policies ([Froxz](https://github.com/Froxz)) [#1108](https://github.com/KnpLabs/php-github-api/issues/1108)
+
+### Changed
+- Test on PHP 8.2 ([GrahamCampbell](https://github.com/GrahamCampbell)) [#1105](https://github.com/KnpLabs/php-github-api/issues/1105)
+
+### Fixed
+- Bugfix creating env ([Froxz](https://github.com/Froxz)) [#1107](https://github.com/KnpLabs/php-github-api/issues/1107)
+
+## 3.10.0
+
+### Added
+- Add vulnerability alerts endpoints ([andreia](https://github.com/andreia)) [#1096](https://github.com/KnpLabs/php-github-api/issues/1096)
+- Added environments ([Froxz](https://github.com/Froxz)) [#1103](https://github.com/KnpLabs/php-github-api/issues/1103)
+
+### Changed
+- Create authorization removed from docs ([rafasashi](https://github.com/rafasashi)) [#1090](https://github.com/KnpLabs/php-github-api/issues/1090)
+- Setup dependabot for github action workflows ([acrobat](https://github.com/acrobat)) [#1098](https://github.com/KnpLabs/php-github-api/issues/1098)
+- Bump actions/checkout from 2 to 3 ([dependabot](https://github.com/dependabot)[[bot](https://github.com/bot)]) [#1099](https://github.com/KnpLabs/php-github-api/issues/1099)
+- Bump ramsey/composer-install from 1 to 2 ([dependabot](https://github.com/dependabot)[[bot](https://github.com/bot)]) [#1100](https://github.com/KnpLabs/php-github-api/issues/1100)
+
 ## 3.9.0
 
 ### Added
